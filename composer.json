@@ -1,0 +1,20 @@
+{
+    "name": "socialiteproviders/weixin2",
+    "description": "Another Weixin OAuth2 Provider for Laravel Socialite",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zengxianfeng",
+            "email": "imzengxf@163.com"
+        }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "socialiteproviders/manager": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SocialiteProviders\\Weixin2\\": "src/"
+        }
+    }
+}
