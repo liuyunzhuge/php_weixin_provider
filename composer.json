@@ -1,5 +1,5 @@
 {
-    "name": "socialiteproviders/weixin2",
+    "name": "thirdproviders/weixin",
     "description": "Another Weixin OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SocialiteProviders\\Weixin2\\": "src/"
+            "ThirdProviders\\Weixin\\": "src/"
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace SocialiteProviders\Weixin2;
+namespace ThirdProviders\Weixin;
 
 use Laravel\Socialite\Two\ProviderInterface;
 use SocialiteProviders\Manager\Contracts\ConfigInterface;
