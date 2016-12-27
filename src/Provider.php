@@ -224,7 +224,7 @@ class Provider extends AbstractProvider implements ProviderInterface
                 '=',
                 $this->getEncryptState($state),
                 "; path=/; domain=",
-                $_SERVER['HTTP_HOST'],
+                $this->getDomain(),
                 "; expires=" . gmstrftime("%A, %d-%b-%Y %H:%M:%S GMT", time() + $this->state_cookie_time),
                 "; Max-Age=" . $this->state_cookie_time,
                 "; httponly"
@@ -232,6 +232,22 @@ class Provider extends AbstractProvider implements ProviderInterface
         ]);
 
         return $response;
+    }
+
+
+    /**
+     * 获取应用部署的一级域名
+     * @return mixed
+     */
+    public function getDomain()
+    {
+        $server_name = $_SERVER['SERVER_NAME'];
+
+        if(strpos($server_name, 'www.') !== false) {
+            return substr($server_name, 4);
+        }
+
+        return $server_name;
     }
 
     /**
